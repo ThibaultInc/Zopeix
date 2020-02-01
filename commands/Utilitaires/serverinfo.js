@@ -17,7 +17,7 @@ module.exports.run = async (client, message, args, functions) => {
         .addField("> Catégorie(s):", `\`${message.guild.channels.filter(channel => channel.type === "category").size}\` catégorie(s).`, true)
         .addField("> Rôle(s):", `\`${message.guild.roles.size}\` rôle(s).`, true)
         .addField("> Région:", `\`${functions.capitalise(message.guild.region)}\``, true)
-        .addField("> Date de création:", `\`${message.guild.createdAt.getDay()}/${message.guild.createdAt.getMonth()+1}/${message.guild.createdAt.getFullYear()} ${message.guild.createdAt.getHours()}:${message.guild.createdAt.getMinutes()}:${message.guild.createdAt.getSeconds()}\``, true)
+        .addField("> Date de création:", `\`${message.guild.createdAt.getDate()}/${message.guild.createdAt.getMonth()+1}/${message.guild.createdAt.getFullYear()} ${message.guild.createdAt.getHours()}:${message.guild.createdAt.getMinutes()}:${message.guild.createdAt.getSeconds()}\``, true)
         .addField("> Niveau de vérification:", `\`${message.guild.verificationLevel}\``, true)
         .addField("> Propriétaire:", `${message.guild.owner.user}`, true);
     message.channel.send(embed);
